@@ -62,9 +62,11 @@
             // txtUsuario
             // 
             txtUsuario.Location = new Point(343, 156);
+            txtUsuario.MaxLength = 10;
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(137, 23);
             txtUsuario.TabIndex = 2;
+            txtUsuario.TextChanged += txtUsuario_TextChanged;
             // 
             // lblModulo
             // 
@@ -78,10 +80,14 @@
             // 
             // txtContraseña
             // 
+            txtContraseña.Enabled = false;
             txtContraseña.Location = new Point(343, 198);
+            txtContraseña.MaxLength = 10;
             txtContraseña.Name = "txtContraseña";
+            txtContraseña.PasswordChar = '*';
             txtContraseña.Size = new Size(137, 23);
             txtContraseña.TabIndex = 4;
+            txtContraseña.TextChanged += txtContraseña_TextChanged;
             // 
             // btnAceptar
             // 
@@ -91,6 +97,7 @@
             btnAceptar.TabIndex = 5;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // btnCancelar
             // 
@@ -100,14 +107,19 @@
             btnCancelar.TabIndex = 6;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // ComboBoxModulo
             // 
+            ComboBoxModulo.DropDownStyle = ComboBoxStyle.DropDownList;
+            ComboBoxModulo.Enabled = false;
             ComboBoxModulo.FormattingEnabled = true;
+            ComboBoxModulo.Items.AddRange(new object[] { "ADM", "SIST", "COM", "VTA" });
             ComboBoxModulo.Location = new Point(343, 237);
             ComboBoxModulo.Name = "ComboBoxModulo";
             ComboBoxModulo.Size = new Size(137, 23);
             ComboBoxModulo.TabIndex = 7;
+            ComboBoxModulo.SelectedIndexChanged += ComboBoxModulo_SelectedIndexChanged;
             // 
             // frmPrincipal
             // 

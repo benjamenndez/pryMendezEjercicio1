@@ -16,5 +16,10 @@ namespace pryMendezEjercicio1
         {
             InitializeComponent();
         }
+
+        private void lblLogo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

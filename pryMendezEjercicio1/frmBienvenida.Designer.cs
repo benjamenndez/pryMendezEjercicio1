@@ -48,18 +48,19 @@
             lblLogo.BackColor = Color.Blue;
             lblLogo.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLogo.ForeColor = Color.FromArgb(255, 224, 192);
-            lblLogo.Location = new Point(275, 230);
+            lblLogo.Location = new Point(260, 232);
             lblLogo.Name = "lblLogo";
-            lblLogo.Size = new Size(257, 50);
+            lblLogo.Size = new Size(283, 50);
             lblLogo.TabIndex = 1;
-            lblLogo.Text = "Sintepart SRL";
+            lblLogo.Text = "Sinterplast SRL";
+            lblLogo.Click += lblLogo_Click;
             // 
             // frmBienvenida
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(802, 454);
             Controls.Add(lblLogo);
             Controls.Add(lblBienvenido);
             Name = "frmBienvenida";
