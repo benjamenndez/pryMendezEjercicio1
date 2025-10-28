@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBienvenida));
             lblBienvenido = new Label();
             lblLogo = new Label();
             SuspendLayout();
@@ -36,7 +37,7 @@
             // 
             lblBienvenido.AutoSize = true;
             lblBienvenido.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBienvenido.Location = new Point(270, 161);
+            lblBienvenido.Location = new Point(87, 48);
             lblBienvenido.Name = "lblBienvenido";
             lblBienvenido.Size = new Size(262, 50);
             lblBienvenido.TabIndex = 0;
@@ -48,7 +49,7 @@
             lblLogo.BackColor = Color.Blue;
             lblLogo.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLogo.ForeColor = Color.FromArgb(255, 224, 192);
-            lblLogo.Location = new Point(260, 232);
+            lblLogo.Location = new Point(77, 119);
             lblLogo.Name = "lblLogo";
             lblLogo.Size = new Size(283, 50);
             lblLogo.TabIndex = 1;
@@ -60,11 +61,13 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(802, 454);
+            ClientSize = new Size(436, 236);
             Controls.Add(lblLogo);
             Controls.Add(lblBienvenido);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmBienvenida";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Bienvenida Sinterplast SRL";
             ResumeLayout(false);
             PerformLayout();
         }

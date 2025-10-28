@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             lblUsuario = new Label();
             lblContraseña = new Label();
             txtUsuario = new TextBox();
@@ -42,7 +43,7 @@
             // 
             lblUsuario.AutoSize = true;
             lblUsuario.Font = new Font("Segoe UI", 12F);
-            lblUsuario.Location = new Point(239, 158);
+            lblUsuario.Location = new Point(31, 27);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(64, 21);
             lblUsuario.TabIndex = 0;
@@ -52,7 +53,7 @@
             // 
             lblContraseña.AutoSize = true;
             lblContraseña.Font = new Font("Segoe UI", 12F);
-            lblContraseña.Location = new Point(239, 200);
+            lblContraseña.Location = new Point(31, 67);
             lblContraseña.Name = "lblContraseña";
             lblContraseña.Size = new Size(89, 21);
             lblContraseña.TabIndex = 1;
@@ -61,18 +62,18 @@
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(343, 156);
+            txtUsuario.Location = new Point(135, 25);
             txtUsuario.MaxLength = 10;
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(137, 23);
-            txtUsuario.TabIndex = 2;
+            txtUsuario.TabIndex = 0;
             txtUsuario.TextChanged += txtUsuario_TextChanged;
             // 
             // lblModulo
             // 
             lblModulo.AutoSize = true;
             lblModulo.Font = new Font("Segoe UI", 12F);
-            lblModulo.Location = new Point(239, 239);
+            lblModulo.Location = new Point(31, 104);
             lblModulo.Name = "lblModulo";
             lblModulo.Size = new Size(64, 21);
             lblModulo.TabIndex = 3;
@@ -81,32 +82,34 @@
             // txtContraseña
             // 
             txtContraseña.Enabled = false;
-            txtContraseña.Location = new Point(343, 198);
+            txtContraseña.Location = new Point(135, 67);
             txtContraseña.MaxLength = 10;
             txtContraseña.Name = "txtContraseña";
             txtContraseña.PasswordChar = '*';
             txtContraseña.Size = new Size(137, 23);
-            txtContraseña.TabIndex = 4;
+            txtContraseña.TabIndex = 1;
             txtContraseña.TextChanged += txtContraseña_TextChanged;
             // 
             // btnAceptar
             // 
-            btnAceptar.Location = new Point(536, 156);
+            btnAceptar.BackColor = SystemColors.GradientActiveCaption;
+            btnAceptar.Location = new Point(197, 164);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(75, 23);
-            btnAceptar.TabIndex = 5;
+            btnAceptar.TabIndex = 3;
             btnAceptar.Text = "Aceptar";
-            btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.UseVisualStyleBackColor = false;
             btnAceptar.Click += btnAceptar_Click;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(536, 198);
+            btnCancelar.BackColor = SystemColors.GradientActiveCaption;
+            btnCancelar.Location = new Point(116, 164);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
-            btnCancelar.TabIndex = 6;
+            btnCancelar.TabIndex = 4;
             btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // ComboBoxModulo
@@ -115,17 +118,17 @@
             ComboBoxModulo.Enabled = false;
             ComboBoxModulo.FormattingEnabled = true;
             ComboBoxModulo.Items.AddRange(new object[] { "ADM", "SIST", "COM", "VTA" });
-            ComboBoxModulo.Location = new Point(343, 237);
+            ComboBoxModulo.Location = new Point(135, 106);
             ComboBoxModulo.Name = "ComboBoxModulo";
             ComboBoxModulo.Size = new Size(137, 23);
-            ComboBoxModulo.TabIndex = 7;
+            ComboBoxModulo.TabIndex = 2;
             ComboBoxModulo.SelectedIndexChanged += ComboBoxModulo_SelectedIndexChanged;
             // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(285, 200);
             Controls.Add(ComboBoxModulo);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
@@ -134,8 +137,10 @@
             Controls.Add(txtUsuario);
             Controls.Add(lblContraseña);
             Controls.Add(lblUsuario);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmPrincipal";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Bienvenida";
             ResumeLayout(false);
             PerformLayout();
         }
